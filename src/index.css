@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "TiltNeon";
+    src: local("TiltNeon"),
+    url("./fonts/TiltNeon-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+* {
+    font-family: TiltNeon, serif;
+    margin: 0;
+    padding: 0;
+}

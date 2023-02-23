@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore/lite';
 import AuthContext from "./context/AuthContext";
+import AuthPage from "./pages/auth";
 
 function App() {
 
@@ -36,9 +37,11 @@ function App() {
       colors: {
         primaryColor: "#0F0F0F",
         secondaryColor: "#000000",
+        contentColor: "#ffffff",
+        hintColor: "#949494"
       }
     }}>
-      App
+      <AuthPage />
     </AuthContext.Provider>
   )
 }
