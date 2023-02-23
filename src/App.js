@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore/lite';
+import AuthContext from "./context/AuthContext";
 
 function App() {
+
+  // const firebaseConfig = {
+  //   apiKey: "AIzaSyAtvznBiElu4oPwez1vbaNRpRmFZV8T8Jg",
+  //   authDomain: "web-training-monitori.firebaseapp.com",
+  //   databaseURL: "https://web-training-monitori-default-rtdb.firebaseio.com",
+  //   projectId: "web-training-monitori",
+  //   storageBucket: "web-training-monitori.appspot.com",
+  //   messagingSenderId: "327741577117",
+  //   appId: "1:327741577117:web:86eed89e0c039e5a4fc174",
+  //   measurementId: "G-0WK3WETG8V"
+  // };
+  //
+  // const app = initializeApp(firebaseConfig);
+  // const db = getFirestore(app);
+
+  // new Promise(async () => {
+  // await addDoc(collection(db, 'workouts'), {
+  //   "workout": "workout"
+  // });
+
+  //   const data = await getDocs(collection(db, 'users'))
+  //   const info = data.docs.map(doc => {
+  //     console.log(doc.id);
+  //     doc.data()
+  //   })
+  //   console.log(info)
+  // }).then()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AuthContext.Provider value={{
+      colors: {
+        primaryColor: "#0F0F0F",
+        secondaryColor: "#000000",
+      }
+    }}>
+      App
+    </AuthContext.Provider>
+  )
 }
 
 export default App;
