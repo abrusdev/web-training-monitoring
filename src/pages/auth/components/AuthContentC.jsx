@@ -1,6 +1,7 @@
 import AuthInputC from "./AuthInputC";
 import { makeStyles } from "@mui/styles";
 import useAuth from "../../../hooks/use-auth";
+import AuthButtonC from "./AuthButtonC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -9,15 +10,17 @@ const useStyles = makeStyles(() => ({
 
     position: 'absolute',
     width: 400,
-    top: '50%',
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
   },
   title: {
-    color: ({colors}) => colors.contentColor
+    margin: 0,
+    color: ({ colors }) => colors.contentColor
   },
   description: {
-    color: ({colors}) => colors.hintColor
+    marginTop: 8,
+    color: ({ colors }) => colors.hintColor
   }
 }))
 
@@ -29,7 +32,9 @@ function AuthContentC() {
     <div className={styles.content}>
       <h1 className={styles.title}>Welcome back</h1>
       <p className={styles.description}>Welcome back! Please enter your details.</p>
-      <AuthInputC />
+      <AuthInputC label='Email' placeholder='Enter your email' />
+      <AuthInputC label='Password' placeholder='Enter your password' type='password' />
+      <AuthButtonC>Sign In</AuthButtonC>
     </div>
   )
 }

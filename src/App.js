@@ -36,9 +36,11 @@ function App() {
     <AuthContext.Provider value={{
       colors: {
         primaryColor: "#0F0F0F",
-        secondaryColor: "#000000",
+        primaryDarkColor: "#000000",
         contentColor: "#ffffff",
-        hintColor: "#949494"
+        hintColor: "#949494",
+        secondaryColor: "#E2FFA7",
+        thirdColor: "#48FEBC",
       }
     }}>
       <AuthPage />

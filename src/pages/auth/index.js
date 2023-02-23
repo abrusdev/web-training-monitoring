@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     height: '100vh',
     overflow: 'hidden',
-    background: ({ colors }) => colors.secondaryColor,
+    background: ({ colors }) => colors.primaryDarkColor,
   },
   leftContent: {
     position: 'relative',
@@ -36,6 +36,12 @@ const useStyles = makeStyles(() => ({
     top: '50%',
     transform: 'translate(50%,-50%)',
     opacity: 0.7
+  },
+  copyright: {
+    position: 'absolute',
+    bottom: 40,
+    left: 40,
+    color: ({colors}) => colors.hintColor
   }
 }))
 
@@ -53,6 +59,8 @@ function AuthPage() {
         <img className={styles.image} src="/images/login.png" alt="" />
         <img className={styles.logo} src="/images/logo.png" alt="" />
       </div>
+
+      <p className={styles.copyright}>Training Tracker Copyrighted © 2023 by AbrusDev</p>
     </div>
   )
 }
