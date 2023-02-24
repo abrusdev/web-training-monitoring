@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
     right: '50%',
     top: '50%',
     transform: 'translate(50%,-50%)',
-    opacity: 0.7
+    opacity: 0.1
   },
   copyright: {
     position: 'absolute',

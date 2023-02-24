@@ -3,6 +3,7 @@ import useAuth from "../../../hooks/use-auth";
 
 const useStyles = makeStyles(() => ({
   content: {
+    cursor: 'pointer',
     marginTop: 40,
     width: '100%',
     height: 45,
@@ -10,7 +11,11 @@ const useStyles = makeStyles(() => ({
     borderRadius: 8,
     border: 'none',
 
-    fontWeight: 700
+    fontWeight: 700,
+
+    '&:hover': {
+      background: ({ colors }) => `linear-gradient(90deg, ${colors.secondaryColor}90, ${colors.thirdColor}90)`
+    }
   }
 }))
 
