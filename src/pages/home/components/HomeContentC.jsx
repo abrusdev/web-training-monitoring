@@ -9,8 +9,7 @@ const useStyles = makeStyles(() => ({
     padding: 60
   },
   firstInnerContent: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto 1fr',
+    display: 'flex',
     gap: 60,
   }
 }));

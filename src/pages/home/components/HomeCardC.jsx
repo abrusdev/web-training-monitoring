@@ -1,5 +1,6 @@
 import useColors from "../../../hooks/use-colors";
 import { makeStyles } from "@mui/styles";
+import { cn } from "../../../utils";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -16,12 +17,12 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-function HomeCardC({ children, height = 240 }) {
+function HomeCardC({ children, height = 240, className = '' }) {
   const colors = useColors();
   const styles = useStyles({ colors, height });
 
   return (
-    <div className={styles.content}>
+    <div className={cn(className, styles.content)}>
       {children}
     </div>
   );
