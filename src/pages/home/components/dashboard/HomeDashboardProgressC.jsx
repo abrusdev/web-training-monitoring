@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
   content: {
     display: 'flex',
     alignItems: 'center',
-    gap: 30
+    gap: 50
   },
   progressContent: {
     width: 150,

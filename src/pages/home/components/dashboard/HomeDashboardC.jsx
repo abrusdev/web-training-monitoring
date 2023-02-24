@@ -5,7 +5,7 @@ import HomeDashboardProgressC from "./HomeDashboardProgressC";
 
 const useStyles = makeStyles(() => ({
   content: {
-    width: 400,
+    width: 450,
   },
   innerContent: {
     display: 'flex',
