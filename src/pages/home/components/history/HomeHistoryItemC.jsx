@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     position: 'relative',
 
     display: 'flex',
+    columnGap: 20,
     justifyContent: 'space-between',
     alignItems: 'center',
 
@@ -31,6 +32,32 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     height: '100%',
     color: ({ colors }) => `tint(${colors.primaryColor})`,
+  },
+  typeContent: {
+    flex: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 5,
+  },
+  type: {
+    fontSize: 18,
+    fontWeight: 500,
+  },
+  date: {
+    fontSize: 14,
+    fontWeight: 700,
+    opacity: 0.6
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: 500,
+    opacity: 0.6
+  },
+  value: {
+    marginTop: 5,
+    fontSize: 16,
+    fontWeight: 700,
+    opacity: 1
   }
 }))
 
@@ -42,6 +69,21 @@ function HomeHistoryItemC() {
     <div className={styles.content}>
       <div className={styles.iconContent}>
         <img className={styles.icon} src="/images/workouts/ic_walk.svg" alt="training icon" />
+      </div>
+
+      <div className={styles.typeContent}>
+        <h4 className={styles.type}>Run Workout</h4>
+        <p className={styles.date}>25 Feb, 2023 at 01:00 AM</p>
+      </div>
+
+      <div>
+        <p className={styles.label}>Activity</p>
+        <p className={styles.value}>400 kcal</p>
+      </div>
+
+      <div>
+        <p className={styles.label}>Duration</p>
+        <p className={styles.value}>04:00</p>
       </div>
 
       <div className={styles.line}></div>

@@ -1,10 +1,11 @@
 import HomeTitleC from "../base/HomeTitleC";
 import { makeStyles } from "@mui/styles";
 import HomeHistoryItemC from "./HomeHistoryItemC";
+import HomeButtonC from "../base/HomeButtonC";
 
 const useStyles = makeStyles(() => ({
   content: {
-    width: 600,
+    width: 500,
   },
   innerContent: {
     marginTop: 15,
@@ -22,6 +23,9 @@ function HomeHistoryC() {
         <HomeHistoryItemC />
         <HomeHistoryItemC />
         <HomeHistoryItemC />
+        <HomeHistoryItemC />
+
+        <HomeButtonC>Show More</HomeButtonC>
       </div>
     </div>
   )
