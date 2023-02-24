@@ -1,4 +1,4 @@
-import useAuth from "../../hooks/use-auth";
+import useColors from "../../hooks/use-colors";
 import { makeStyles } from "@mui/styles";
 import AuthContentC from "./components/AuthContentC";
 
@@ -41,12 +41,12 @@ const useStyles = makeStyles(() => ({
     position: 'absolute',
     bottom: 40,
     left: 40,
-    color: ({colors}) => colors.hintColor
+    color: ({ colors }) => colors.hintColor
   }
 }))
 
 function AuthPage() {
-  const { colors } = useAuth();
+  const colors = useColors();
   const styles = useStyles({ colors })
 
   return (

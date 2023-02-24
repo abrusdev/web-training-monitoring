@@ -1,8 +1,8 @@
 import AuthInputC from "./AuthInputC";
 import { makeStyles } from "@mui/styles";
-import useAuth from "../../../hooks/use-auth";
+import useColors from "../../../hooks/use-colors";
 import AuthButtonC from "./AuthButtonC";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { loginUser } from "../../../api";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../../../components/loader";
@@ -30,13 +30,13 @@ const useStyles = makeStyles(() => ({
 
 function AuthContentC() {
   const dispatch = useDispatch()
-  const { isLoading, data, error } = useSelector((state) => {
+  const { isLoading } = useSelector((state) => {
     return state.user
   })
 
   console.log(isLoading);
 
-  const { colors } = useAuth();
+  const colors = useColors();
   const styles = useStyles({ colors })
 
   const [login, setLogin] = useState('');

@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import useAuth from "../../../hooks/use-auth";
+import useColors from "../../../hooks/use-colors";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 function AuthButtonC({ children }) {
-  const { colors } = useAuth();
+  const colors = useColors();
   const styles = useStyles({ colors })
 
   return (

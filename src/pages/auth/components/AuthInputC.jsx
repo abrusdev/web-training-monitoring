@@ -1,4 +1,4 @@
-import useAuth from "../../../hooks/use-auth";
+import useColors from "../../../hooks/use-colors";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 function AuthInputC({ label, ...props }) {
-  const { colors } = useAuth();
+  const colors = useColors();
   const styles = useStyles({ colors })
 
   return (
