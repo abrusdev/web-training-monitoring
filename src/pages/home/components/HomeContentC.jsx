@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles";
 import useColors from "../../../hooks/use-colors";
 import HomeActivityC from "./activity/HomeActivityC";
 import HomeDashboardC from "./dashboard/HomeDashboardC";
+import HomeContributionC from "./contribution/HomeContributionC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -24,6 +25,8 @@ function HomeContentC() {
         <HomeActivityC />
 
         <HomeDashboardC />
+
+        <HomeContributionC />
       </div>
     </div>
   )
