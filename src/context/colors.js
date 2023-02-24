@@ -12,6 +12,7 @@ const ColorsProvider = ({ children }) => {
       hintColor: "#949494",
       secondaryColor: "#E2FFA7",
       thirdColor: "#48FEBC",
+      progressColor: "#BDBCB7",
     }}>
       {children}
     </ColorsContext.Provider>

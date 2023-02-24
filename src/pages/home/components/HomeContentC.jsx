@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
   },
   firstInnerContent: {
     display: 'grid',
-    gridTemplateColumns: '4fr 60px 3fr 60px 3fr',
+    gridTemplateColumns: 'auto 60px 3fr 60px 3fr',
   }
 }));
 
