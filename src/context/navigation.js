@@ -17,7 +17,7 @@ const NavigationProvider = ({ children }) => {
     window.addEventListener('popstate', handler);
 
     if (!user.id) {
-      navigate("/auth")
+      navigate('/auth')
     }
 
     return () => {
