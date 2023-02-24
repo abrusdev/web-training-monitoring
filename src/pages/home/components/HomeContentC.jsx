@@ -3,6 +3,7 @@ import useColors from "../../../hooks/use-colors";
 import HomeActivityC from "./activity/HomeActivityC";
 import HomeDashboardC from "./dashboard/HomeDashboardC";
 import HomeContributionC from "./contribution/HomeContributionC";
+import HomeHistoryC from "./history/HomeHistoryC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -11,6 +12,11 @@ const useStyles = makeStyles(() => ({
   firstInnerContent: {
     display: 'flex',
     gap: 60,
+  },
+  secondInnerContent: {
+    marginTop: 60,
+    display: 'flex',
+    gap: 60
   }
 }));
 
@@ -26,6 +32,10 @@ function HomeContentC() {
         <HomeDashboardC />
 
         <HomeContributionC />
+      </div>
+
+      <div className={styles.secondInnerContent}>
+        <HomeHistoryC />
       </div>
     </div>
   )
