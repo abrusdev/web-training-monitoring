@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import useColors from "../../../../hooks/use-colors";
 import HomeCardC from "../HomeCardC";
 import HomeContributionAnalyticsC from "./HomeContributionAnalyticsC";
+import HomeContributionItemC from "./HomeContributionItemC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -18,12 +19,6 @@ const useStyles = makeStyles(() => ({
     gap: 5,
     gridAutoFlow: 'column',
     gridTemplateRows: 'repeat(14, 1fr)'
-  },
-  itemContent: {
-    width: 10,
-    height: 10,
-    borderRadius: 2,
-    background: ({ colors }) => `${colors.contentColor}20`
   }
 }))
 
@@ -34,7 +29,7 @@ function HomeContributionC() {
   const items = [];
 
   for (let i = 0; i < 365; i++) {
-    items.push(<div className={styles.itemContent}></div>)
+    items.push(<HomeContributionItemC value={i > 300 ? (i % 10) : 0} />)
   }
 
   return (
