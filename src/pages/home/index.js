@@ -1,9 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import HomeTopContentC from "./components/HomeTopContentC";
 import useColors from "../../hooks/use-colors";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "../../store";
+import HomeContentC from "./components/HomeContentC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -21,6 +19,8 @@ function HomePage() {
   return (
     <div className={styles.content}>
       <HomeTopContentC />
+
+      <HomeContentC />
     </div>
   )
 }

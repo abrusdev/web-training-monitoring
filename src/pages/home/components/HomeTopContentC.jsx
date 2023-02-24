@@ -18,14 +18,14 @@ const useStyles = makeStyles(() => ({
     color: ({ colors }) => colors.hintColor,
     fontWeight: 700,
     fontSize: 16,
-    opacity: 0.7
+    opacity: 0.6
   },
   title: {
     marginTop: 5,
     color: ({ colors }) => colors.contentColor,
     fontWeight: 400,
     fontSize: 24,
-    opacity: 0.9
+    opacity: 0.8
   },
   rightContent: {
     display: 'flex',
