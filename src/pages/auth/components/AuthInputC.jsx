@@ -25,6 +25,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: 8,
     padding: '0 12px',
     outline: 'none',
+    color: ({ colors }) => colors.primaryColor,
     border: '2px transparent solid',
 
     '&:focus': {

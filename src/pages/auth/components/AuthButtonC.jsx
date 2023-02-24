@@ -7,9 +7,10 @@ const useStyles = makeStyles(() => ({
     marginTop: 40,
     width: '100%',
     height: 45,
-    background: ({ colors }) => `linear-gradient(90deg, ${colors.secondaryColor}, ${colors.thirdColor})`,
     borderRadius: 8,
     border: 'none',
+    color: ({ colors }) => colors.primaryColor,
+    background: ({ colors }) => `linear-gradient(90deg, ${colors.secondaryColor}, ${colors.thirdColor})`,
 
     fontWeight: 700,
 

@@ -1,4 +1,5 @@
-.demo {
+.progress__container {
+    position: relative;
     flex-direction: column;
     display: flex;
     width: 100%;
@@ -12,6 +13,15 @@
 .progress__meter,
 .progress__value {
     fill: none;
+}
+
+.progress__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    font-size: 20px;
 }
 
 .progress__meter {
