@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import useColors from "../../../hooks/use-colors";
 import HomeActivityC from "./activity/HomeActivityC";
+import HomeDashboardC from "./dashboard/HomeDashboardC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -8,7 +9,8 @@ const useStyles = makeStyles(() => ({
   },
   firstInnerContent: {
     display: 'grid',
-    gridTemplateColumns: 'auto 60px 3fr 60px 3fr',
+    gridTemplateColumns: 'auto auto 1fr',
+    gap: 60,
   }
 }));
 
@@ -18,9 +20,10 @@ function HomeContentC() {
 
   return (
     <div className={styles.content}>
-
       <div className={styles.firstInnerContent}>
         <HomeActivityC />
+
+        <HomeDashboardC />
       </div>
     </div>
   )

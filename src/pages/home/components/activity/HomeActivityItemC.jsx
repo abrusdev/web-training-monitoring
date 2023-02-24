@@ -9,7 +9,6 @@ const useStyles = makeStyles(() => ({
     gap: 10,
 
     width: 50,
-    height: 200,
     opacity: ({ isActive }) => isActive ? 1.0 : 0.2,
   },
   innerContent: {

@@ -11,6 +11,7 @@ const useStyles = makeStyles(() => ({
     gap: 20,
 
     width: 'auto',
+    height: 240,
 
     marginTop: 15,
     padding: '15px 30px',
