@@ -30,11 +30,6 @@ const useStyles = makeStyles(() => ({
 
 function AuthContentC() {
   const dispatch = useDispatch()
-  const { isLoading } = useSelector((state) => {
-    return state.user
-  })
-
-  console.log(isLoading);
 
   const colors = useColors();
   const styles = useStyles({ colors })
@@ -50,8 +45,6 @@ function AuthContentC() {
 
   return (
     <div className={styles.content}>
-      {isLoading && <Loader />}
-
       <h1 className={styles.title}>Welcome back</h1>
       <p className={styles.description}>Welcome back! Please enter your details.</p>
       <form onSubmit={handleSubmit}>

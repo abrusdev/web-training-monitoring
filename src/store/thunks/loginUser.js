@@ -4,18 +4,23 @@ import { getPath } from "../utils";
 const loginUser = createAsyncThunk('user/login', async (args, { rejectWithValue }) => {
   const data = await getPath("users");
 
-  let userId = null;
+  let response = {}
 
   data.forEach((doc) => {
     const info = doc.data();
+
     if (info.login === args.login && info.password === args.password) {
-      userId = doc.id;
-      localStorage.setItem("secret", userId)
+      response = {
+        id: doc.id,
+        name: info.name
+      }
+
+      localStorage.setItem("secret", doc.id)
     }
   })
 
-  if (userId)
-    return { id: userId };
+  if (response.id)
+    return response;
   else
     return rejectWithValue('Credentials not found')
 });

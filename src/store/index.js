@@ -1,5 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { loginUser } from "./thunks/loginUser";
+import { getUser } from "./thunks/getUser";
 
 const userSlice = createSlice({
   name: "user",
@@ -21,7 +22,17 @@ const userSlice = createSlice({
     });
     builder.addCase(loginUser.rejected, (state, action) => {
       state.isLoading = false;
-      console.log(action.payload)
+      state.error = action.payload
+    });
+    builder.addCase(getUser.pending, (state, action) => {
+      state.isLoading = true
+    });
+    builder.addCase(getUser.fulfilled, (state, action) => {
+      state.isLoading = false
+      state.data = action.payload
+    });
+    builder.addCase(getUser.rejected, (state, action) => {
+      state.isLoading = false
     });
   }
 })
@@ -34,3 +45,4 @@ const store = configureStore({
 
 export { store };
 export * from './thunks/loginUser';
+export * from './thunks/getUser';

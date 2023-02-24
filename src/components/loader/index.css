@@ -6,7 +6,6 @@
 
     width: 400px;
     height: 4px;
-    border-radius: 2px;
 }
 
 .loader__bar_layout {
@@ -22,6 +21,7 @@
 
 .loader__bar {
     animation-delay: 0s;
+    border-radius: 2px;
     background: #48FEBC;
     top: 0;
     z-index: 1;

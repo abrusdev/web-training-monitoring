@@ -1,16 +1,23 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../store";
 
 const NavigationContext = createContext();
 
 const NavigationProvider = ({ children }) => {
+  const dispatch = useDispatch();
+
   const [path, setPath] = useState(window.location.pathname);
   const { data: user } = useSelector((state) => {
     return state.user
   })
 
   useEffect(() => {
-    console.log(user);
+    if (user.id)
+      dispatch(getUser());
+  }, [])
+
+  useEffect(() => {
     if (!user.id && path !== '/auth') {
       navigate('/auth')
     }
