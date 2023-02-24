@@ -10,15 +10,23 @@ const NavigationProvider = ({ children }) => {
   })
 
   useEffect(() => {
+    console.log(user);
+    if (!user.id && path !== '/auth') {
+      navigate('/auth')
+    }
+
+    if (user.id && path === '/auth') {
+      navigate('/')
+    }
+
+  }, [user])
+
+  useEffect(() => {
     const handler = () => {
       setPath(window.location.pathname)
     }
 
     window.addEventListener('popstate', handler);
-
-    if (!user.id) {
-      navigate('/auth')
-    }
 
     return () => {
       window.removeEventListener('popstate', handler);

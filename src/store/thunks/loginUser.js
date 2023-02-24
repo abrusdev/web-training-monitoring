@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getPath } from "../utils";
 
-const loginUser = createAsyncThunk('user/login', async (args) => {
+const loginUser = createAsyncThunk('user/login', async (args, { rejectWithValue }) => {
   const data = await getPath("users");
 
   let userId = null;
@@ -14,7 +14,10 @@ const loginUser = createAsyncThunk('user/login', async (args) => {
     }
   })
 
-  return { id: userId };
+  if (userId)
+    return { id: userId };
+  else
+    return rejectWithValue('Credentials not found')
 });
 
 export { loginUser };
