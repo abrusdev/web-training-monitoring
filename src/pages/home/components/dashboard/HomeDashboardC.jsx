@@ -1,8 +1,8 @@
-import HomeTitleC from "../HomeTitleC";
 import { makeStyles } from "@mui/styles";
 import useColors from "../../../../hooks/use-colors";
 import HomeDashboardProgressC from "./HomeDashboardProgressC";
-import HomeCardC from "../HomeCardC";
+import HomeCardC from "../base/HomeCardC";
+import HomeTitleC from "../base/HomeTitleC";
 
 const useStyles = makeStyles(() => ({
   content: {

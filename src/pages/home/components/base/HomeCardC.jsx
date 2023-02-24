@@ -1,6 +1,6 @@
-import useColors from "../../../hooks/use-colors";
 import { makeStyles } from "@mui/styles";
-import { cn } from "../../../utils";
+import useColors from "../../../../hooks/use-colors";
+import { cn } from "../../../../utils";
 
 const useStyles = makeStyles(() => ({
   content: {

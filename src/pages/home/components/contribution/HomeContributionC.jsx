@@ -1,9 +1,9 @@
-import HomeTitleC from "../HomeTitleC";
 import { makeStyles } from "@mui/styles";
 import useColors from "../../../../hooks/use-colors";
-import HomeCardC from "../HomeCardC";
 import HomeContributionAnalyticsC from "./HomeContributionAnalyticsC";
 import HomeContributionItemC from "./HomeContributionItemC";
+import HomeCardC from "../base/HomeCardC";
+import HomeTitleC from "../base/HomeTitleC";
 
 const useStyles = makeStyles(() => ({
   content: {
