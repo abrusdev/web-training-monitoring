@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 import useColors from "../../../hooks/use-colors";
 import AuthButtonC from "./AuthButtonC";
 import { useEffect, useState } from "react";
-import { loginUser } from "../../../api";
+import { loginUser } from "../../../store";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../../../components/loader";
 

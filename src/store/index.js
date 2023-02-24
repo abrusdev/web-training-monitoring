@@ -5,7 +5,9 @@ const userSlice = createSlice({
   name: "user",
   initialState: {
     isLoading: false,
-    data: null,
+    data: {
+      id: localStorage.getItem('secret')
+    },
     error: null
   },
   reducers: {},

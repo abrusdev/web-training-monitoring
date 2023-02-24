@@ -6,7 +6,7 @@ import './index.css';
 
 import './fonts/TiltNeon-Regular.ttf';
 import { Provider } from "react-redux";
-import { store } from "./api";
+import { store } from "./store";
 
 const el = document.querySelector("#root");
 const root = ReactDOM.createRoot(el);
