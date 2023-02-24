@@ -1,0 +1,46 @@
+.loader__layout {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 400px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.loader__bar_layout {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    margin: 0 auto;
+    animation: loader__bar_animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.loader__bar {
+    animation-delay: 0s;
+    background: #48FEBC;
+    top: 0;
+    z-index: 1;
+}
+
+@keyframes loader__bar_animation {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 50%;
+    }
+    100% {
+        width: 0%;
+    }
+}

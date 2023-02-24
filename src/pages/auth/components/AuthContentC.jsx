@@ -4,7 +4,8 @@ import useAuth from "../../../hooks/use-auth";
 import AuthButtonC from "./AuthButtonC";
 import { useState } from "react";
 import { loginUser } from "../../../api";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "../../../components/loader";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -29,6 +30,11 @@ const useStyles = makeStyles(() => ({
 
 function AuthContentC() {
   const dispatch = useDispatch()
+  const { isLoading, data, error } = useSelector((state) => {
+    return state.user
+  })
+
+  console.log(isLoading);
 
   const { colors } = useAuth();
   const styles = useStyles({ colors })
@@ -39,12 +45,13 @@ function AuthContentC() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const request = { login, password }
-    dispatch(loginUser(request));
+    dispatch(loginUser({ login, password }));
   }
 
   return (
     <div className={styles.content}>
+      {isLoading && <Loader />}
+
       <h1 className={styles.title}>Welcome back</h1>
       <p className={styles.description}>Welcome back! Please enter your details.</p>
       <form onSubmit={handleSubmit}>
