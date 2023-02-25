@@ -2,7 +2,7 @@ import HomeTitleC from "../base/HomeTitleC";
 import { makeStyles } from "@mui/styles";
 import HomeCardC from "../base/HomeCardC";
 import HomeWorkoutTypeC from "./HomeWorkoutTypeC";
-import { AES, enc } from "crypto-js";
+import HomeWorkoutCreateC from "./HomeWorkoutCreateC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -29,8 +29,8 @@ function HomeWorkoutC() {
           <HomeWorkoutTypeC type='ic_hit' />
         </div>
 
-        <HomeCardC height={400}>
-
+        <HomeCardC height={450}>
+          <HomeWorkoutCreateC type='ic_walk' />
         </HomeCardC>
       </div>
     </div>

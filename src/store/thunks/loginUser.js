@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { decrypt, encrypt, getPath } from "../utils";
+import { decrypt, getPath } from "../utils";
 
 const loginUser = createAsyncThunk('user/login', async (args, { rejectWithValue }) => {
   const data = await getPath("users");

@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     height: 50,
     borderRadius: 8,
     border: ({ isSelected, colors }) => isSelected ? `2px solid ${colors.secondaryColor}` : ``,
-    background: ({ isSelected, colors }) => isSelected ? `${colors.contentColor}90` : `${colors.contentColor}20`,
+    background: ({ isSelected, colors }) => isSelected ? `${colors.contentColor}30` : `${colors.contentColor}10`,
   }
 }))
 
@@ -22,7 +22,7 @@ function HomeWorkoutTypeC({ isSelected, type }) {
 
   return (
     <div className={styles.content}>
-      <img src={`/images/workouts/${type}.svg`} alt="type" />
+      <img src={`/images/workouts/${type}_white.svg`} alt="type" />
     </div>
   )
 }
