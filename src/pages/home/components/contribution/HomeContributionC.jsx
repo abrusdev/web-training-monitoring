@@ -29,7 +29,7 @@ function HomeContributionC() {
   const items = [];
 
   for (let i = 0; i < 365; i++) {
-    items.push(<HomeContributionItemC value={i > 300 ? (i % 10) : 0} />)
+    items.push(<HomeContributionItemC key={i} value={i > 300 ? (i % 10) : 0} />)
   }
 
   return (

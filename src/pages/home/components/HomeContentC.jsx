@@ -4,6 +4,7 @@ import HomeActivityC from "./activity/HomeActivityC";
 import HomeDashboardC from "./dashboard/HomeDashboardC";
 import HomeContributionC from "./contribution/HomeContributionC";
 import HomeHistoryC from "./history/HomeHistoryC";
+import HomeWorkoutC from "./workout/HomeWorkoutC";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -36,6 +37,8 @@ function HomeContentC() {
 
       <div className={styles.secondInnerContent}>
         <HomeHistoryC />
+
+        <HomeWorkoutC />
       </div>
     </div>
   )

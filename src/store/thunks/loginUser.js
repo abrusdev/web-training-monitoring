@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getPath } from "../utils";
+import { decrypt, encrypt, getPath } from "../utils";
 
 const loginUser = createAsyncThunk('user/login', async (args, { rejectWithValue }) => {
   const data = await getPath("users");
@@ -9,7 +9,7 @@ const loginUser = createAsyncThunk('user/login', async (args, { rejectWithValue 
   data.forEach((doc) => {
     const info = doc.data();
 
-    if (info.login === args.login && info.password === args.password) {
+    if (info.login === args.login && decrypt(info.password) === args.password) {
       response = {
         id: doc.id,
         name: info.name
