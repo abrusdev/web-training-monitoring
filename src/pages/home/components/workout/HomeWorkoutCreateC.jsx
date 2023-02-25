@@ -93,7 +93,7 @@ function HomeWorkoutCreateC({ type }) {
         <span className={styles.metrics}>seconds</span>
       </div>
 
-      <p className={styles.label}>Start Time</p>
+      <p className={styles.label}>End Time</p>
       <div className={styles.inputContent}>
         <input className={styles.input} type="date" />
         <input className={styles.input} type="time" />
