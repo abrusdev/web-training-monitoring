@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "ic_walk",
+      "name": "Walk Workout"
+    },
+    {
+      "id": 2,
+      "type": "ic_run",
+      "name": "Run Workout"
+    },
+    {
+      "id": 3,
+      "type": "ic_hit",
+      "name": "Functional Workout"
+    }
+  ]
+}

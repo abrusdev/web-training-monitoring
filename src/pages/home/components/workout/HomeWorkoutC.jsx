@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import HomeCardC from "../base/HomeCardC";
 import HomeWorkoutTypeC from "./HomeWorkoutTypeC";
 import HomeWorkoutCreateC from "./HomeWorkoutCreateC";
+import { useState } from "react";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -17,6 +18,11 @@ const useStyles = makeStyles(() => ({
 function HomeWorkoutC() {
   const styles = useStyles();
 
+  const [type, setType] = useState('ic_walk');
+
+  const handleSelect = (type) => {
+    setType(type)
+  }
 
   return (
     <div className={styles.content}>
@@ -24,13 +30,13 @@ function HomeWorkoutC() {
 
       <div className={styles.innerContent}>
         <div>
-          <HomeWorkoutTypeC type='ic_walk' isSelected />
-          <HomeWorkoutTypeC type='ic_run' />
-          <HomeWorkoutTypeC type='ic_hit' />
+          <HomeWorkoutTypeC type='ic_walk' selectedType={type} onSelect={handleSelect} />
+          <HomeWorkoutTypeC type='ic_run' selectedType={type} onSelect={handleSelect} />
+          <HomeWorkoutTypeC type='ic_hit' selectedType={type} onSelect={handleSelect} />
         </div>
 
         <HomeCardC height={450}>
-          <HomeWorkoutCreateC type='ic_walk' />
+          <HomeWorkoutCreateC type={type} />
         </HomeCardC>
       </div>
     </div>

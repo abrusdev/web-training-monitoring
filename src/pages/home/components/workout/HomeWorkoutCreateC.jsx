@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import useColors from "../../../../hooks/use-colors";
 import HomeButtonC from "../base/HomeButtonC";
+import workouts from './workouts.json';
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -72,11 +73,13 @@ function HomeWorkoutCreateC({ type }) {
   const colors = useColors();
   const styles = useStyles({ colors });
 
+  const workout = workouts.data.find((workout) => workout.type === type)
+
   return (
     <div className={styles.content}>
-      <img className={styles.icon} src={`/images/workouts/${type}_white.svg`} alt="walk" />
+      <img className={styles.icon} src={`/images/workouts/${workout.type}_white.svg`} alt="walk" />
 
-      <h2 className={styles.title}>Walk Workout</h2>
+      <h2 className={styles.title}>{workout.name}</h2>
 
       <p className={styles.label} style={{ marginTop: 20 }}>Calories</p>
       <div className={styles.inputContent}>

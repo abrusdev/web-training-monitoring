@@ -3,6 +3,7 @@ import useColors from "../../../../hooks/use-colors";
 
 const useStyles = makeStyles(() => ({
   content: {
+    cursor: 'pointer',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -16,12 +17,14 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-function HomeWorkoutTypeC({ isSelected, type }) {
+function HomeWorkoutTypeC({ selectedType, onSelect, type }) {
+  const isSelected = selectedType === type
+
   const colors = useColors();
   const styles = useStyles({ colors, isSelected });
 
   return (
-    <div className={styles.content}>
+    <div className={styles.content} onClick={() => onSelect(type)}>
       <img src={`/images/workouts/${type}_white.svg`} alt="type" />
     </div>
   )
